@@ -99,7 +99,26 @@
     
     NSLog(@"groceryList : %@\n", groceryList);
     
-    // 47분 40초 
+    /*
+        배열
+     */
+    NSArray *officeSupplies = @[@"Pencils", @"Paper", @"earphone"];
+    
+    NSLog(@"First item: %@", officeSupplies[0]);
+    NSLog(@"Office Supplies: %@", officeSupplies);
+    
+    // 자바 boolean containsItem = officeSupplies.containsObject("Pencils");
+    BOOL containsItem = [officeSupplies containsObject:@"Pencils"];
+    NSLog(@"Need Pencils : %d", containsItem);
+    
+    // 자바 (int)officeSupplies.count()
+    NSLog(@"Total : %d", (int)[officeSupplies count]);
+    // 자바 officeSupplies.indexOfObject("Pencils");
+    NSLog(@"Index of Pencils is at %lu", (unsigned long)[officeSupplies indexOfObject:@"Pencils"]);
+    
+    // 배열 할당량
+    // 자료형이 정해져 있지 않은 배열 NSMutableArray
+    NSMutableArray *heros = [NSMutableArray arrayWithCapacity:5];
     
     
     
