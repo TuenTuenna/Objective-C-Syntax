@@ -74,13 +74,34 @@
     const char *newQuote = [[wholeQuote stringByReplacingCharactersInRange:range withString:@"Anon"]UTF8String];
 
 //    NSLog(@"newQuote: %s\n", newQuote);
-    printf("%s", newQuote);
+    printf("%s\n", newQuote);
     
     // 자바 String groceryList = String.stringWithCapacity(50);
     NSMutableString *groceryList = [NSMutableString stringWithCapacity:50];
     
     // 자바 groceryList.appendFormat("%s", "Potato, Banana, Pasta");
-    [groceryList appendFormat:@"%s", "Potato, Banana, Pasta"];
+    [groceryList appendFormat:@"%s\n", "Potato, Banana, Pasta"];
+    
+    NSLog(@"groceryList : %@\n", groceryList);
+    
+    // 자바 groceryList.deleteCharactersInRange(new NSMakeRange(0, 8));
+    [groceryList deleteCharactersInRange:NSMakeRange(0, 8)];
+    
+    NSLog(@"groceryList : %@\n", groceryList);
+    
+    // 자바 groceryList.insertString(", Apple", 13);
+    [groceryList insertString:@", Apple" atIndex:13];
+    
+    NSLog(@"groceryList : %@\n", groceryList);
+    
+    // 자바 groceryList.replaceCharactersInRange(new NSMakeRange(15, 5), "Orange");
+    [groceryList replaceCharactersInRange:NSMakeRange(15, 5) withString:@"Orange"];
+    
+    NSLog(@"groceryList : %@\n", groceryList);
+    
+    // 47분 40초 
+    
+    
     
 }
 
